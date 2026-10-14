@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: tiem-postgres
+    environment:
+      POSTGRES_DB: tiem
+      POSTGRES_USER: tiem
+      POSTGRES_PASSWORD: tiem_dev_123
+    ports:
+      - "5432:5432"
+    volumes:
+      - tiem_pgdata:/var/lib/postgresql/data
+
+volumes:
+  tiem_pgdata:
